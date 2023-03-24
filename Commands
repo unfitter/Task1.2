@@ -1,0 +1,11 @@
+In order of checkpoints:
+1)df -h | awk -F ' +' '{printf "%-15s %-10s %-15s\n", $1, $5, $6}' > disk_usage.txt
+
+2)du -h /etc/ | awk '{print $1 "\t" $2}' | sort -nrk 1 | head -10
+
+3,4)vim third.txt
+    sed -n '/^N[SD]/p' /home/oleg/three.txt
+    
+5)sed -n '/\/bin\/bash/p' /etc/passwd | nl > bin_bash.txt
+6)cp passwd /home/oleg/
+  sed 's/\/bin\/sh/\/bin\/bash/g' /etc/passwd
